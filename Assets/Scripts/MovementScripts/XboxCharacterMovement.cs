@@ -62,7 +62,7 @@ namespace ProjectCindra.Movement
             runAction = new InputAction(
                 name: "Run",
                 type: InputActionType.Button,
-                binding: "<Gamepad>/buttonWest");
+                binding: "<Gamepad>/leftStickPress");
 
             jumpAction = new InputAction(
                 name: "Jump",

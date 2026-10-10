@@ -344,10 +344,11 @@ namespace Spine.Unity.Editor {
 						r.y += 2;
 						r.width = 13;
 						r.height = 13;
-						if (skeletonUtilityBoneTable[instanceId].mode == SkeletonUtilityBone.Mode.Follow)
-							GUI.DrawTexture(r, Icons.bone);
-						else
-							GUI.DrawTexture(r, Icons.poseBones);
+						Texture2D boneIcon = skeletonUtilityBoneTable[instanceId].mode == SkeletonUtilityBone.Mode.Follow
+							? Icons.bone
+							: Icons.poseBones;
+						if (boneIcon != null)
+							GUI.DrawTexture(r, boneIcon);
 					}
 				} else if (boundingBoxFollowerTable.ContainsKey(instanceId)) {
 					r.x -= 26;
@@ -357,7 +358,8 @@ namespace Spine.Unity.Editor {
 						r.y += 2;
 						r.width = 13;
 						r.height = 13;
-						GUI.DrawTexture(r, Icons.boundingBox);
+						if (Icons.boundingBox != null)
+							GUI.DrawTexture(r, Icons.boundingBox);
 					}
 				} else if (boundingBoxFollowerGraphicTable.ContainsKey(instanceId)) {
 					r.x -= 26;
@@ -367,7 +369,8 @@ namespace Spine.Unity.Editor {
 						r.y += 2;
 						r.width = 13;
 						r.height = 13;
-						GUI.DrawTexture(r, Icons.boundingBox);
+						if (Icons.boundingBox != null)
+							GUI.DrawTexture(r, Icons.boundingBox);
 					}
 				}
 			}
