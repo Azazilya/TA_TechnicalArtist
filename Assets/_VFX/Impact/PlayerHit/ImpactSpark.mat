@@ -125,7 +125,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Intensity: 5.29
+    - _Intensity: 12
     - _LightingEnabled: 0
     - _Metallic: 0
     - _Mode: 1
@@ -153,8 +153,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 0, g: 0.6248207, b: 2, a: 1}
-    - _Color1: {r: 0, g: 0.042027473, b: 1, a: 1}
-    - _Color2: {r: 0.3332999, g: 2.2152576, b: 3.7584906, a: 0.39215687}
+    - _Color1: {r: 0, g: 0.009414434, b: 1, a: 1}
+    - _Color2: {r: 0, g: 0, b: 0, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}

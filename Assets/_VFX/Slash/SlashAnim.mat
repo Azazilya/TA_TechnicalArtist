@@ -30,14 +30,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _CoreThreshold: 0.803
-    - _InnerIntensity: 3
+    - _InnerIntensity: 2.41
     - _Opacity: 1
-    - _OuterIntensity: 12
-    - _Size: 1
-    - _Thickness: 1
+    - _OuterIntensity: 0
+    - _Size: 1.04
+    - _Thickness: 1.04
     m_Colors:
-    - _InnerColor: {r: 3.7283018, g: 2.1790507, b: 0, a: 1}
-    - _OuterColor: {r: 1, g: 0, b: 0.1905384, a: 1}
+    - _InnerColor: {r: 4.977576, g: 4.977576, b: 4.977576, a: 1}
+    - _OuterColor: {r: 1, g: 1, b: 1, a: 1}
     - _Tiles: {r: 5, g: 4, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -16,9 +16,8 @@ namespace ProjectCindra.Combat
         [SerializeField] private Vector3 colliderPadding = new Vector3(0.12f, 0.08f, 0.25f);
         [SerializeField] private bool refitColliderWhilePlaying = true;
 
-        [Header("Optional Hit Reaction")]
+        [Header("Death")]
         [SerializeField] private Animator animator;
-        [SerializeField] private string hitStateName = "pushed";
         [SerializeField] private string deathStateName = "died";
 
         public bool IsAlive => currentHealth > 0f;
@@ -67,12 +66,9 @@ namespace ProjectCindra.Combat
 
             currentHealth = Mathf.Max(0f, currentHealth - damage);
             DamageTaken?.Invoke(damage, hitPoint, hitDirection);
-            if (animator != null)
-            {
-                string state = IsAlive ? hitStateName : deathStateName;
-                if (!string.IsNullOrEmpty(state) && animator.HasState(0, Animator.StringToHash(state)))
-                    animator.Play(state, 0, 0f);
-            }
+            if (!IsAlive && animator != null && !string.IsNullOrEmpty(deathStateName) &&
+                animator.HasState(0, Animator.StringToHash(deathStateName)))
+                animator.Play(deathStateName, 0, 0f);
 
             Debug.Log($"[DummyTarget] Hit {damage:0.#}. HP {currentHealth:0.#}/{maxHealth:0.#}", this);
         }

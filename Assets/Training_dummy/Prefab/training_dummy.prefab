@@ -221,7 +221,6 @@ MonoBehaviour:
   colliderPadding: {x: 0.12, y: 0.08, z: 0.25}
   refitColliderWhilePlaying: 1
   animator: {fileID: 5615497917579445399}
-  hitStateName: pushed
   deathStateName: died
 --- !u!114 &5947236812054768190
 MonoBehaviour:
@@ -236,13 +235,20 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectCindra.VFX.VFXImpact
   impactPrefab: {fileID: 0}
+  delay: 0
   spawnPoint: {fileID: 0}
+  spawnAtHitPoint: 1
   localOffset: {x: 0, y: 1, z: 0}
   parentToTarget: 0
+  scale: {x: 1, y: 1, z: 1}
   destroyAfter: 1.5
-  sortingLayerName:
-  sortingOrder: 30
   rotateToHitDirection: 1
+  slashAngleOffset: 20
+  overrideMaterialAppearance: 1
+  thickness: 1.2
+  intensity: 12
+  sortingLayerName:
+  sortingOrder: 100
 --- !u!1 &6774080502169825540
 GameObject:
   m_ObjectHideFlags: 0
